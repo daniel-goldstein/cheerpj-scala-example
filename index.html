@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cjrtnc.leaningtech.com/3.0rc2/cj3loader.js"></script>
+        <script type="module">
+            await cheerpjInit();
+            let lib = await cheerpjRunLibrary("/app/hail.jar:/app/scala-library-2.12.15.jar");
+
+            let Foo = await lib.is.hail.Foo;
+            await Foo.main([]);
+        </script>
+    </head>
+    <body>
+        <p>Hello!</p>
+    </body>
+</html>

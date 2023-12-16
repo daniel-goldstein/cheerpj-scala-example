@@ -4,10 +4,15 @@
         <script src="https://cjrtnc.leaningtech.com/3.0rc2/cj3loader.js"></script>
         <script type="module">
             await cheerpjInit();
-            let lib = await cheerpjRunLibrary("/app/hail.jar:/app/scala-library-2.12.15.jar");
+            let lib = await cheerpjRunLibrary("/app/hail.jar:/app/scala-library.jar");
 
+            // Running a main method that requires loading Predef fails
             let Foo = await lib.is.hail.Foo;
             await Foo.main([]);
+
+            // Even just loading scala.Predef explicitly fails
+            // let Predef = await lib.scala.Predef;
+            // await Predef.println();
         </script>
     </head>
     <body>

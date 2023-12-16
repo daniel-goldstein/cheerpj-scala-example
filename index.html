@@ -11,8 +11,8 @@
             await Foo.main([]);
 
             // Even just loading scala.Predef explicitly fails
-            // let Predef = await lib.scala.Predef;
-            // await Predef.println();
+            let Predef = await lib.scala.Predef;
+            await Predef.println("Hello world!");
         </script>
     </head>
     <body>

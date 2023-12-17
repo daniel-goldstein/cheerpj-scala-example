@@ -8,11 +8,11 @@
 
             // Running a main method that requires loading Predef fails
             let Foo = await lib.is.hail.Foo;
-            await Foo.main([]);
+            await Foo.main(["Hello world!"]);
 
             // Even just loading scala.Predef explicitly fails
-            let Predef = await lib.scala.Predef;
-            await Predef.println("Hello world!");
+            // let Predef = await lib.scala.Predef;
+            // await Predef.println("Hello world!");
         </script>
     </head>
     <body>

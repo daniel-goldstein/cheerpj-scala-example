@@ -11,6 +11,7 @@
                 await Foo.main(["Hello world!"]);
             } catch (e) {
                 console.log(await (await e.getException()).printStackTrace())
+                throw e
             }
 
             // Even just loading scala.Predef explicitly fails

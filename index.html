@@ -4,8 +4,7 @@
         <script src="https://cjrtnc.leaningtech.com/3.0rc2/cj3loader.js"></script>
         <script type="module">
             await cheerpjInit();
-            let lib = await cheerpjRunLibrary("https://daniel-goldstein.github.io/cheerpj-scala-example/hail.jar:https://daniel-goldstein.github.io/cheerpj-scala-example/scala-library.jar");
-
+            let lib = await cheerpjRunLibrary("/app/cheerpj-scala-example/hail.jar:/app/cheerpj-scala-example/scala-library.jar");
             // Running a main method that requires loading Predef fails
             let Foo = await lib.is.hail.Foo;
             await Foo.main(["Hello world!"]);
